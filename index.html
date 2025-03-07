@@ -1,52 +1,54 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Matteo De Felice</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-    <header class="hero">
-        <h1>Matteo De Felice</h1>
-        <p>Esperto in logistica e digitalizzazione - Appassionato di IT</p>
-    </header>
+.hero {
+    background: url('sfondo.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 24px;
+}
 
-    <nav class="tabs">
-        <button class="tab-link active" onclick="openTab(event, 'profilo')">Profilo</button>
-        <button class="tab-link" onclick="openTab(event, 'esperienza')">Esperienza</button>
-        <button class="tab-link" onclick="openTab(event, 'competenze')">Competenze</button>
-        <button class="tab-link" onclick="openTab(event, 'contatti')">Contatti</button>
-    </nav>
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-    <div id="profilo" class="tab-content active">
-        <h2>Profilo Professionale</h2>
-        <p>Professionista organizzato con esperienza nella logistica e nelle tecnologie digitali. Appassionato del settore IT.</p>
-    </div>
+.tab-link {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
 
-    <div id="esperienza" class="tab-content">
-        <h2>Esperienza Lavorativa</h2>
-        <h3>Poste Italiane</h3>
-        <p>Ruolo: Addetto al recapito</p>
-    </div>
+.tab-link:hover {
+    background-color: #003d7a;
+}
 
-    <div id="competenze" class="tab-content">
-        <h2>Competenze Digitali</h2>
-        <ul>
-            <li><i class="fas fa-laptop-code"></i> WordPress (Base)</li>
-            <li><i class="fas fa-search"></i> SEO e gestione siti web</li>
-            <li><i class="fas fa-photo-video"></i> Adobe Photoshop, Premiere Pro</li>
-        </ul>
-    </div>
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    <div id="contatti" class="tab-content">
-        <h2>Contatti</h2>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:matteo.defe97@gmail.com">matteo.defe97@gmail.com</a></p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/matteodefelice" target="_blank">Profilo LinkedIn</a></p>
-    </div>
-
-</body>
-</html>
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
