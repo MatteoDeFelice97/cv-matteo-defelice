@@ -5,52 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Matteo De Felice</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="#profilo">Profilo</a> |
-        <a href="#esperienza">Esperienza</a> |
-        <a href="#competenze">Competenze</a> |
-        <a href="#contatti">Contatti</a>
+
+    <header class="hero">
+        <h1>Matteo De Felice</h1>
+        <p>Esperto in logistica e digitalizzazione - Appassionato di IT</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'profilo')">Profilo</button>
+        <button class="tab-link" onclick="openTab(event, 'esperienza')">Esperienza</button>
+        <button class="tab-link" onclick="openTab(event, 'competenze')">Competenze</button>
+        <button class="tab-link" onclick="openTab(event, 'contatti')">Contatti</button>
     </nav>
 
-    <div class="container">
-        <header>
-            <h1>Matteo De Felice</h1>
-            <p>Email: <a href="mailto:matteo.defe97@gmail.com">matteo.defe97@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/matteodefelice" target="_blank">Profilo LinkedIn</a></p>
-        </header>
-
-        <section id="profilo">
-            <h2>Profilo Professionale</h2>
-            <p>Professionista organizzato con esperienza nella logistica e nelle tecnologie digitali. Appassionato del settore IT.</p>
-        </section>
-
-        <section id="esperienza">
-            <h2 onclick="toggleSection('esperienza-details')">Esperienza Lavorativa ⏷</h2>
-            <div id="esperienza-details" style="display: none;">
-                <h3>Poste Italiane</h3>
-                <p>Ruolo: Addetto al recapito</p>
-                <p>Utilizzo del software T&T per il tracciamento delle spedizioni.</p>
-            </div>
-        </section>
-
-        <section id="competenze">
-            <h2>Competenze Digitali</h2>
-            <ul>
-                <li>WordPress (Base)</li>
-                <li>SEO e gestione siti web</li>
-                <li>Adobe Photoshop, Premiere Pro, Illustrator</li>
-            </ul>
-        </section>
-
-        <section id="contatti">
-            <h2>Contatti</h2>
-            <p>Email: <a href="mailto:matteo.defe97@gmail.com">matteo.defe97@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/matteodefelice" target="_blank">Profilo LinkedIn</a></p>
-        </section>
+    <div id="profilo" class="tab-content active">
+        <h2>Profilo Professionale</h2>
+        <p>Professionista organizzato con esperienza nella logistica e nelle tecnologie digitali. Appassionato del settore IT.</p>
     </div>
 
-    <script src="script.js"></script>
+    <div id="esperienza" class="tab-content">
+        <h2>Esperienza Lavorativa</h2>
+        <h3>Poste Italiane</h3>
+        <p>Ruolo: Addetto al recapito</p>
+    </div>
+
+    <div id="competenze" class="tab-content">
+        <h2>Competenze Digitali</h2>
+        <ul>
+            <li><i class="fas fa-laptop-code"></i> WordPress (Base)</li>
+            <li><i class="fas fa-search"></i> SEO e gestione siti web</li>
+            <li><i class="fas fa-photo-video"></i> Adobe Photoshop, Premiere Pro</li>
+        </ul>
+    </div>
+
+    <div id="contatti" class="tab-content">
+        <h2>Contatti</h2>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:matteo.defe97@gmail.com">matteo.defe97@gmail.com</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/matteodefelice" target="_blank">Profilo LinkedIn</a></p>
+    </div>
+
 </body>
 </html>
